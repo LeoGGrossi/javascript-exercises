@@ -34,13 +34,15 @@
       const unLi = document.querySelector("ul");
       const input = document.querySelector("input");
       const btn = document.querySelector("button");
-
+      btn.id = "original";
 
       btn.addEventListener("click", function (element){
         element.preventDefault();
         const value = input.value;
         input.value = "";
         
+        console.log(element.target.id)
+
         const newLi = document.createElement("li");
         const newSpan = document.createElement("span");
         const newButton = document.createElement("button");
